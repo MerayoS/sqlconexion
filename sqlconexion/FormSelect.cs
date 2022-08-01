@@ -51,11 +51,17 @@ namespace sqlconexion
 
             if (listBoxSelect.SelectedItem != null)
             {
-                listBoxSelect.Items.Remove(listBoxSelect.SelectedItem);
                 command.ExecuteNonQuery();
+                listBoxSelect.Items.Remove(listBoxSelect.SelectedItem);
             }
             else
                 MessageBox.Show("Debe seleccionar la fila que quiere eliminar");
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            var myForm = new FormUpdate();
+            myForm.ShowDialog();
         }
     }
 }

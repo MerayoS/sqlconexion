@@ -57,7 +57,7 @@ namespace sqlconexion
             // 
             // btninsert
             // 
-            this.btninsert.Location = new System.Drawing.Point(142, 285);
+            this.btninsert.Location = new System.Drawing.Point(78, 285);
             this.btninsert.Name = "btninsert";
             this.btninsert.Size = new System.Drawing.Size(211, 82);
             this.btninsert.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace sqlconexion
             // 
             // btnselect
             // 
-            this.btnselect.Location = new System.Drawing.Point(453, 285);
+            this.btnselect.Location = new System.Drawing.Point(519, 285);
             this.btnselect.Name = "btnselect";
             this.btnselect.Size = new System.Drawing.Size(211, 82);
             this.btnselect.TabIndex = 3;

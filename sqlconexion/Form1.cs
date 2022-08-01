@@ -83,5 +83,11 @@ namespace sqlconexion
             var myForm = new FormSelect();
             myForm.ShowDialog();
         }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            var myForm = new FormUpdate();
+            myForm.ShowDialog();
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace sqlconexion
             this.listBoxSelect = new System.Windows.Forms.ListBox();
             this.select = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxSelect
@@ -63,11 +64,22 @@ namespace sqlconexion
             this.btndelete.UseVisualStyleBackColor = true;
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Location = new System.Drawing.Point(385, 278);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(175, 51);
+            this.btnupdate.TabIndex = 3;
+            this.btnupdate.Text = "Modificar seleccion";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
             // FormSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 370);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.select);
             this.Controls.Add(this.listBoxSelect);
@@ -82,5 +94,6 @@ namespace sqlconexion
         private System.Windows.Forms.ListBox listBoxSelect;
         private System.Windows.Forms.Button select;
         private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnupdate;
     }
 }
