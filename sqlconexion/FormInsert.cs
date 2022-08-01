@@ -24,11 +24,28 @@ namespace sqlconexion
             {
              
                 string jobTitle = txtjobtittle.Text;
-                int minS = Int32.Parse(txtminsalary.Text);
-                int maxS = Int32.Parse(txtmaxsalary.Text);
-                string cadena = "insert into jobs (job_title, min_salary, max_salary) values ('" + jobTitle + "', " + minS + ", " + maxS + ");";
+                Decimal? minS = Decimal.Parse(txtminsalary.Text);
+                Decimal? maxS = Decimal.Parse(txtmaxsalary.Text);
+
+                string cadena = "insert into jobs (job_title, min_salary, max_salary) values (@pJobTitle, @pMin, @pMax);";
+
                 //Form1.conexion funciona por que la conexion se decalro globalmente en el form1, y ademas es public static
                 SqlCommand command = new SqlCommand(cadena, Form1.conexion);
+
+                //Creando estos parametros evitamos que los usuarios puedan realizar consultas sql en los campos a completar
+                //Haciendo uso de " o '
+                SqlParameter pJobTitle = new SqlParameter("@pJobTitle", SqlDbType.VarChar,35);
+                pJobTitle.Value = jobTitle;
+                command.Parameters.Add(pJobTitle);
+
+                SqlParameter pMin = new SqlParameter("@pMin", SqlDbType.Decimal);
+                pMin.Value = minS;
+                command.Parameters.Add(pMin);
+
+                SqlParameter pMax = new SqlParameter("@pMax", SqlDbType.Decimal);
+                pMax.Value = maxS;
+                command.Parameters.Add(pMax);
+
                 command.ExecuteNonQuery();
                 MessageBox.Show("Insert realizado correctamente");
                 

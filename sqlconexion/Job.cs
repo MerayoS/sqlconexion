@@ -10,15 +10,15 @@ namespace sqlconexion
     {
         private int jobID;
         private string jobTitle;
-        private decimal minSal;
-        private decimal maxSal;
+        private decimal? minSal;
+        private decimal? maxSal;
 
         public int JobID { get => jobID; set => jobID = value; }
         public string JobTitle { get => jobTitle; set => jobTitle = value; }
-        public decimal MinSal { get => minSal; set => minSal = value; }
-        public decimal MaxSal { get => maxSal; set => maxSal = value; }
+        public decimal? MinSal { get => minSal; set => minSal = value; }
+        public decimal? MaxSal { get => maxSal; set => maxSal = value; }
 
-        public Job(int JobID, string JobTitle, decimal MinSal, decimal MaxSal)
+        public Job()
         {
             jobID = JobID;
             jobTitle = JobTitle;
@@ -28,10 +28,12 @@ namespace sqlconexion
 
         public override string ToString()
         {
-            return "Job-Id: " + JobID +
+                return "Job-Id: " + JobID +
                     ", Job-Title: " + JobTitle +
-                    ", Min-Salary: " + MinSal +
-                    ", Max-Salary: " + MaxSal + ".";
+                    ", Min-Salary: " + (MinSal == null ? "null" : MinSal.ToString()) +
+                    ", Max-Salary: " + (MaxSal == null ? "null" : "" + MaxSal) + ".";
+            
+            
         }
     }
 }

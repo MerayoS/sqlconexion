@@ -33,6 +33,7 @@ namespace sqlconexion
             this.btndisconect = new System.Windows.Forms.Button();
             this.btninsert = new System.Windows.Forms.Button();
             this.btnselect = new System.Windows.Forms.Button();
+            this.btnupdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnconect
@@ -67,7 +68,7 @@ namespace sqlconexion
             // 
             // btnselect
             // 
-            this.btnselect.Location = new System.Drawing.Point(519, 285);
+            this.btnselect.Location = new System.Drawing.Point(295, 285);
             this.btnselect.Name = "btnselect";
             this.btnselect.Size = new System.Drawing.Size(211, 82);
             this.btnselect.TabIndex = 3;
@@ -75,11 +76,22 @@ namespace sqlconexion
             this.btnselect.UseVisualStyleBackColor = true;
             this.btnselect.Click += new System.EventHandler(this.btnselect_Click);
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Location = new System.Drawing.Point(519, 285);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(211, 82);
+            this.btnupdate.TabIndex = 4;
+            this.btnupdate.Text = "Update";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnselect);
             this.Controls.Add(this.btninsert);
             this.Controls.Add(this.btndisconect);
@@ -96,6 +108,7 @@ namespace sqlconexion
         private System.Windows.Forms.Button btndisconect;
         private System.Windows.Forms.Button btninsert;
         private System.Windows.Forms.Button btnselect;
+        private System.Windows.Forms.Button btnupdate;
     }
 }
 
